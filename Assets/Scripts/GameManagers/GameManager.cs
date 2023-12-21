@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+// Group under the GameManagers namespace, and to not pollute the global namespace
 namespace GameManagers
 {
     public class GameManager : MonoBehaviour
@@ -13,7 +14,7 @@ namespace GameManagers
         private bool isPaused = false;
 
         // Variable to store the UIManager component
-        [SerializeField] public UIManager uiManager;
+        public UIManager uiManager;
 
         private void Awake()
         {
@@ -51,6 +52,7 @@ namespace GameManagers
                 //AudioManager.Instance.PlaySoundEffect("Unpause");
             }
 
+            // Toggle the pause menu and UI using the UIManager component
             uiManager.TogglePauseMenu(isPaused, sourcePauseText, sourcePauseMenu, sourceUI);
         }
     }
