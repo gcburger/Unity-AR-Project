@@ -315,9 +315,6 @@ MonoBehaviour:
   moveSceneName: CharacterMoveScene
   placementSceneName: CharacterPlacementScene
   mainMenuSceneName: MainMenuScene
-  pauseText: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  UI: {fileID: 0}
 --- !u!1 &279192494
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +825,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0d45edbb46cf24c92fda7a1096270f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffects: []
+  soundEffects:
+  - {fileID: 8300000, guid: bf5d4102f62c644aa91a146267aaf815, type: 3}
+  - {fileID: 8300000, guid: b896e2c860fa345bcb28f87e366be5bd, type: 3}
+  - {fileID: 8300000, guid: 3574ad7ac970b424487560607b782f4b, type: 3}
+  - {fileID: 8300000, guid: 7f654842aaf974ca39064687927e7574, type: 3}
 --- !u!4 &994701156
 Transform:
   m_ObjectHideFlags: 0

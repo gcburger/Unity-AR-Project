@@ -25,34 +25,40 @@ namespace GameManagers
             if (isPaused)
             {
                 pauseText.text = "Paused";
+                AudioManager.Instance.PlaySoundEffect("Pause_Sfx");
             }
             else
             {
                 pauseText.text = null;
+                AudioManager.Instance.PlaySoundEffect("Play_Sfx");
             }
         }
 
         // Function to load the CharacterMove scene
         public void CharacterMoveScene()
         {
+            AudioManager.Instance.PlaySoundEffect("Button_Click_Sfx");
             SceneManager.LoadScene(moveSceneName);
         }
 
         // Function to load the CharacterPlacement scene
             public void CharacterPlacementScene()
         {
+            AudioManager.Instance.PlaySoundEffect("Button_Click_Sfx");
             SceneManager.LoadScene(placementSceneName);
         }
 
         // Function to load the MainMenu scene
         public void MainMenuScene()
         {
+            AudioManager.Instance.PlaySoundEffect("Button_Click_Sfx");
             SceneManager.LoadScene(mainMenuSceneName);
         }
 
         // Function to quit the application
         public void QuitApp()
         {
+            AudioManager.Instance.PlaySoundEffect("Button_Click_Sfx");
             Application.Quit();
         }
     }
