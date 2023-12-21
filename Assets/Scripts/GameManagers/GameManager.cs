@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 namespace GameManagers
 {
@@ -34,17 +35,8 @@ namespace GameManagers
             }*/
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            // If the space key is pressed, toggle the pause menu
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                TogglePause();
-            }
-        }
-
-        public void TogglePause()
+        // Function to pause the game and toggle a scene's pause menu and UI
+        public void TogglePause(TMP_Text sourcePauseText, GameObject sourcePauseMenu, GameObject sourceUI)
         {
             isPaused = !isPaused;
 
@@ -59,7 +51,7 @@ namespace GameManagers
                 //AudioManager.Instance.PlaySoundEffect("Unpause");
             }
 
-            uiManager.TogglePauseMenu(isPaused);
+            uiManager.TogglePauseMenu(isPaused, sourcePauseText, sourcePauseMenu, sourceUI);
         }
     }
 }

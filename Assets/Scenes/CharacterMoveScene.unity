@@ -132,8 +132,9 @@ GameObject:
   - component: {fileID: 121570713}
   - component: {fileID: 121570712}
   - component: {fileID: 121570711}
+  - component: {fileID: 121570715}
   m_Layer: 5
-  m_Name: UI
+  m_Name: CharacterMoveUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,13 +220,28 @@ RectTransform:
   - {fileID: 215770894}
   - {fileID: 249601721}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 93.096985, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &121570715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121570710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e35f860de2f4e46b497522fc4807b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseText: {fileID: 1929464721}
+  pauseMenu: {fileID: 1171430784}
+  UI: {fileID: 121570710}
 --- !u!1 &149444540
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,8 +326,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 375728529}
-        m_TargetAssemblyTypeName: GameManagers.UIManager, Assembly-CSharp
+      - m_Target: {fileID: 121570715}
+        m_TargetAssemblyTypeName: CharacterMove, Assembly-CSharp
         m_MethodName: MainMenuScene
         m_Mode: 1
         m_Arguments:
@@ -819,8 +835,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 375728528}
-        m_TargetAssemblyTypeName: GameManagers.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 121570715}
+        m_TargetAssemblyTypeName: CharacterMove, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -1143,70 +1159,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!1 &375728526
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 375728527}
-  - component: {fileID: 375728529}
-  - component: {fileID: 375728528}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &375728527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375728526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.518974, y: 1277.4546, z: -23.226381}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &375728528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375728526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a7a022a3a7771e42bc4b92de5a5fad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiManager: {fileID: 375728529}
---- !u!114 &375728529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375728526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 890e84be57188f64fb0b7b8733a54085, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSceneName: CharacterMoveScene
-  placementSceneName: CharacterPlacementScene
-  mainMenuSceneName: MainMenuScene
-  pauseText: {fileID: 1929464721}
-  pauseMenu: {fileID: 1171430784}
-  UI: {fileID: 121570710}
 --- !u!1001 &692521397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1549,8 +1501,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 375728528}
-        m_TargetAssemblyTypeName: GameManagers.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 121570715}
+        m_TargetAssemblyTypeName: CharacterMove, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -1745,7 +1697,7 @@ RectTransform:
   - {fileID: 1929464720}
   - {fileID: 1152202631}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1818,7 +1770,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1489089436
 GameObject:

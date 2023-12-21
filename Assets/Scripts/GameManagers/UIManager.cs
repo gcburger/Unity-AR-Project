@@ -15,12 +15,9 @@ namespace GameManagers
         [SerializeField] private string moveSceneName = "CharacterMoveScene";
         [SerializeField] private string placementSceneName = "CharacterPlacementScene";
         [SerializeField] private string mainMenuSceneName = "MainMenuScene";
-        public TMP_Text pauseText;
-        public GameObject pauseMenu;
-        public GameObject UI;
 
-        // Function to toggle the pause menu and the UI
-        public void TogglePauseMenu(bool isPaused)
+        // Function to toggle a scene's pause menu and UI
+        public void TogglePauseMenu(bool isPaused, TMP_Text pauseText, GameObject pauseMenu, GameObject UI)
         {
             pauseMenu.SetActive(isPaused);
             UI.SetActive(!isPaused);
