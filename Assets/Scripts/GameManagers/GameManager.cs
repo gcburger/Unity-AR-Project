@@ -45,12 +45,10 @@ namespace GameManagers
             if (isPaused)
             {
                 Time.timeScale = 0;
-                //AudioManager.Instance.PlaySoundEffect("Pause");
             }
             else
             {
                 Time.timeScale = 1;
-                //AudioManager.Instance.PlaySoundEffect("Unpause");
             }
 
             // Toggle the pause menu and UI using the UIManager component
