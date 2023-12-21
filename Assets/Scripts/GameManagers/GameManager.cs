@@ -4,6 +4,7 @@ using TMPro;
 // Group under the GameManagers namespace, and to not pollute the global namespace
 namespace GameManagers
 {
+    // Class to track and control the game instance
     public class GameManager : MonoBehaviour
     {
         // Serializing private variables to make them visible and editable in the inspector (but still private to the class)
