@@ -11,7 +11,7 @@ namespace GameManagers
 
         // Array to store the sound effects
         public AudioClip[] soundEffects;
-        private AudioSource audioSource;
+        public AudioSource audioSource;
 
         // Function to play a sound effect
         private void Awake()
@@ -68,6 +68,12 @@ namespace GameManagers
             {
                 Debug.LogWarning("Sound effect not found: " + clipName);
             }
+        }
+
+        // Toggle the audio on/off
+        public void ToggleAudio()
+        {
+            audioSource.mute = !audioSource.mute;
         }
     }
 }
