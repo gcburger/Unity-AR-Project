@@ -1,36 +1,19 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using GameManagers;
 
-// Class to implement the main menu
 public class MainMenu : MonoBehaviour
 {
-    // Serializing private variables to make them visible and editable in the inspector (but still private to the class)
-    // rather than making them public and thus accessible and editable by other classes
-    [SerializeField] private string moveSceneName = "CharacterMoveScene";
-    [SerializeField] private string placementSceneName = "CharacterPlacementScene";
-    [SerializeField] private string mainMenuSceneName = "MainMenuScene";
+    private GameManager gameManager;
 
-    // Function to load the CharacterMove scene
+    // Start is called before the first frame update
+    void Start()
+    {
+        // Assign the `gameManager` variable by using the public static reference in the GameManager class
+        gameManager = GameManager.Instance;
+    }
+
     public void CharacterMoveScene()
     {
-        SceneManager.LoadScene(moveSceneName);
-    }
-
-    // Function to load the CharacterPlacement scene
-        public void CharacterPlacementScene()
-    {
-        SceneManager.LoadScene(placementSceneName);
-    }
-
-    // Function to load the MainMenu scene
-    public void MainMenuScene()
-    {
-        SceneManager.LoadScene(mainMenuSceneName);
-    }
-
-    // Function to quit the application
-    public void QuitApp()
-    {
-        Application.Quit();
+        gameManager.uiManager.CharacterMoveScene();
     }
 }
