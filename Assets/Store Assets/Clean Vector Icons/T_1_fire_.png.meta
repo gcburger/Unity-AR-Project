@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de328077ad8c9594c9ec3cf1023b25fe
+guid: 062eeb9d5e8ba8f45a9ddfea52518f82
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -73,7 +73,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1a9ea4b265d65064da0ff0211e5bb9d0
+    spriteID: 557f9614a99da2c48bfb47479c4b23ed
     vertices: []
     indices: 
     edges: []
@@ -87,5 +87,5 @@ AssetOrigin:
   productId: 132084
   packageName: Clean Vector Icons
   packageVersion: 1.2
-  assetPath: Assets/Store Assets/Clean Vector Icons/T_4_arrow_empty_right_.png
+  assetPath: Assets/Clean Vector Icons/T_1_fire_.png
   uploadId: 364378
