@@ -12,6 +12,7 @@ public class CharacterMove : MonoBehaviour
     [SerializeField] private GameObject UI;
     [SerializeField] private GameObject buttonAudioOn;
     [SerializeField] private GameObject buttonAudioOff;
+    [SerializeField] private GameObject particleEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -61,5 +62,36 @@ public class CharacterMove : MonoBehaviour
     public void TogglePause()
     {
         gameManager.TogglePause(pauseText, pauseMenu, UI);
+    }
+
+    // Function to play a particle effect from the particle system
+    public void PlayParticleEffect()
+    {
+        // NOT WORKING - struggling to play and stop the particle effect individually when it's attached to the character prefab (for location purposes)
+        // Get the ParticleSystem component attached to this GameObject
+        ParticleSystem particleSystem = particleEffect.GetComponentInChildren<ParticleSystem>();
+
+        Debug.Log(particleSystem);
+
+        // Check if the ParticleSystem component exists
+        if (particleSystem != null)
+        {
+            Debug.Log(particleSystem.isPlaying);
+
+            // Play the particle effect
+            if (!particleSystem.isPlaying)
+            {
+                Debug.Log("Start Playing");
+
+                particleSystem.Play();
+                AudioManager.Instance.PlaySoundEffect("Dragon_Growl_00");
+
+                Debug.Log(particleSystem.isPlaying);
+            }
+            else
+            {
+                particleSystem.Stop();
+            }
+        }
     }
 }
